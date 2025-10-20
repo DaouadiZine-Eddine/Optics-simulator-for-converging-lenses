@@ -1,28 +1,33 @@
 --- Optics Simulator by DAOUADI Zine-Eddine Chahine. --
 
-The current program is the finalized version of an optics simulator, that I have been working on for several years.
+The current program is the finalized version of an optics simulator that I have developped 2 years ago.
 I hope that it not only fulfills the need for modelisation that was at the center of the project, but also allows you to discover how light behaves through a lens in certain
 circumstances.
 
---- Instructions for Download. ---
+--- Instructions for the user. ---
 
+#1 - Download the latest release : https://github.com/DaouadiZine-Eddine/Optics-simulator-for-converging-lenses.git
+#2 - Extract the folder.
+#3 - Run the "simulator.exe" file and choose your language. 
 
+The data of the simulator, as well as its assets (which I made with Pixlr for the images) is available to see as well as the html pages for the english and french version.
+Moreover, the launcher closes once the language is chosen and you are brought to the main pages.
 
+-- Contents of the project -- 
 
+-Original assets made for optics using pixlr.
+-French and English versions of the simulator.
+-Accurate modelization of light rays and their path through a converging lens.
+-Source code for the simulator.
 
 --- Objectives & intention behind the code. ---
-As I am publishing this, I am a student in a preparatory class and this project was made with the belief that the user would have enough basic knowledge on optics to perceive
-the sense behind it and the notations.
+
+As the publisher, the project was made with the belief that the user would have enough basic knowledge on optics to perceive the sense behind it and the notations.
 I believe that my work may be imperfect, and it will be for years to come but it is through progress and sheer will that through efforts I desire to improve.
 I am open to any commentary on this project, and any possible enhancement that may come from it or even any criticism related to it so that I may be able to have
 hindsight as to my strenghts and weaknesses.
 
 It would really be appreciated for the author of the code to be credited if any sample from the source code is taken. 
-
-I believe that science is a construct, that we all must participate in.
-Reality is often confusing, hard to perceive but if we give sens to it and gather the shapes together we can make something cohesive.
-Such was the intent of this project, enlightening on a difficult topic where simulations can be either too confusing or too complicated.
-I tried my best to stay simple, and I hope to have succeeded in doing so but that is left to your judgement.
 
 Cordially,
 DAOUADI Zine-Eddine Chahine.
