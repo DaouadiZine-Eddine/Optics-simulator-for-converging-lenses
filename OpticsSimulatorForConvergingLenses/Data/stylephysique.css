@@ -1,0 +1,45 @@
+body {
+  background-color: lightyellow;
+  zoom: 1.5;
+}
+#propriétés-rayon  {
+   text-decoration: underline;-
+}
+
+#line-container {
+  position: relative;
+  border: 1px solid blue;
+}
+
+.line {
+  position: absolute;
+  height: 2px;
+  background-color: aqua;
+  margin: 0px;
+}
+
+.point {
+  position: absolute;
+  margin: 0px;
+}
+
+#point1 {
+  background-color: red;
+  top: 100px;
+  left: 100px;
+  width: 10px;
+  height: 10px;
+}
+
+#point2 {
+  background-color: blue;
+  top: 200px;
+  left: 300px;
+  width: 10px;
+  height: 10px;
+}
+
+#présentationparamètres {
+  text-decoration:underline;
+}
+
