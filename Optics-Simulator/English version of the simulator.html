@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+<html>
+<link rel="stylesheet" href="stylephysique.css">
+<head>
+<meta charset="UTF-8">
+<p style="background-color:whitesmoke; outline-color: black; ">Simulator made by DAOUADI Zine-Eddine Chahine, CC-By-sa 4.0 licence.</p>
+<title>Converging lenses..</title>
+</head>
+  <body>
+     <label for="AB" style="position:relative; top:1350px; left:10px;">Enter the size of the item AB (in cm) : </label><input id="AB" type="number" style="position:relative; top:1350px; left:10px;" min="1" max="3"></input>
+     <label for="dfocale" style="position:relative; top:1350px; left:450px;">Enter the OF distance that equals OF' (in cm) : </label><input id="dfocale" type="number" style="position:relative; top:1350px; left:450px;" min="1" max="5"></input>
+     <br>
+     <label style="position:relative; top:1350px; left:10px;">Enter the distance between the lens and the item OA (en cm) : </label><input id="dobjet" type="number" style="position:relative; top:1350px; left:10px;" min="1" max="5"></input>
+     <button onclick="calculfinal()" style="position:relative; top:1450px; left: 105px;">Launch. </button> <br/>
+     <br>
+     <br/>
+     
+    <svg id="svg" width="1200" height="1700">
+
+      <!-- // Schématisation à partir de rectangles.-->
+
+      <rect id="rect1" x="0" y= "520" width="809" height="50" fill="white" stroke="black" stroke-width="1"/>
+      <rect id="rect2" width="810" height="501" fill="white" stroke="black" stroke-width="1"/>
+      <rect id="rect2" width="809" height="500" fill="white" stroke="black" stroke-width="1"/>
+      <rect id="rect1" x="0" y= "520" width="809" height="60" fill="white" stroke="black" stroke-width="1"/>
+      <rect id="rect1" x="0" y= "520" width="808" height="59" fill="white" stroke="black" stroke-width="1"/>
+      <rect id="rect2" x="830" y="0" width="367" height="577.62" fill="white" stroke="black" stroke-width="1"/>
+      <rect id="rect9" x="0" y="600" width="1200" height="1000" fill="white" stroke="black" stroke-width="1"/>
+      <rect id="rect9" x="0" y="1200" width="1200" height="500" fill="white" stroke="black" stroke-width="1"/>
+      <rect id="rect2" x="50" y="300" width="650" height="1" fill="white" stroke="black" stroke-width="1"/>
+      <rect id="rect2" x="375" y="50" width="1" height="450" fill="white" stroke="black" stroke-width="1"/>
+      <rect id="rect4" x="526" y="380" width="2" height="2" fill="yellow" stroke="black" stroke-width="1"/>
+      <rect id="rect4" x="223" y="220" width="2" height="2" fill="yellow" stroke="black" stroke-width="1"/>
+
+
+
+     <line id="segment" x1="0" y1="0" x2="0" y2="0" style="stroke:black;stroke-width:1" />
+     <line id="segment15" x1="0" y1="0" x2="0" y2="0" style="stroke:black;stroke-width:1" />
+     <line id="segment30" x1="0" y1="0" x2="0" y2="0" style="stroke:black;stroke-width:1" />
+     <line id="segment45" x1="0" y1="0" x2="0" y2="0" style="stroke:black;stroke-width:1" />
+     <line id="segment60" x1="0" y1="0" x2="0" y2="0" style="stroke:black;stroke-width:1" />
+     <line id="segment75" x1="0" y1="0" x2="0" y2="0" style="stroke:red;stroke-width:1" />
+     <line id="segment90" x1="0" y1="0" x2="0" y2="0" style="stroke:black;stroke-width:1" />
+     <line id="segment105" x1="0" y1="0" x2="0" y2="0" style="stroke:black;stroke-width:1" />
+     <line id="segment120" x1="0" y1="0" x2="0" y2="0" style="stroke:black;stroke-width:1" />
+     <line id="segment135" x1="0" y1="0" x2="0" y2="0" style="stroke:black;stroke-width:1" />
+     <line id="segment150" x1="0" y1="0" x2="0" y2="0" style="stroke:black;stroke-width:1" />
+     <line id="segment175" x1="0" y1="0" x2="0" y2="0" style="stroke:black;stroke-width:1" />
+
+      <line id="segment11" x1="526" y1="380" x2="223" y2="220" style="stroke:red;stroke-width:1" /> <!--// Segment passant par le centre optique O. -->
+
+      <line id="segment11" x1="376" y1="220" x2="223" y2="220" style="stroke:red;stroke-width:1" /> <!--// Segment allant vers la lentille..-->
+
+      <line id="segment11" x1="526" y1="380" x2="376" y2="220" style="stroke:red;stroke-width:1" /> <!--// Segment passant par F'.-->
+
+      <line id="segment11" x1="376" y1="380" x2="223" y2="220" style="stroke:red;stroke-width:1" /> <!--// Segment passant par F.-->
+
+      <line id="segment11" x1="526" y1="379" x2="376" y2="380" style="stroke:red;stroke-width:1" /><!--// Segment dévié allant horizontalement vers l'image..-->
+
+
+     <!-- // Droites simulation--> 
+      <line id="segment11" x1="1200" y1="900" x2="0" y2="900" style="stroke:black;stroke-width:1" /><!-- // axe des abscisses-->
+      <line id="segment11" x1="600" y1="1200" x2="600" y2="600" style="stroke:black;stroke-width:1" /><!-- // lentille axe ordonnée-->
+      
+
+ 
+      <!-- // Tous les textes.-->
+      <text id="propriétés-rayon" x="400" y="10" dominant-baseline="middle" text-anchor="middle">Optics in physics : converging lenses.</text>    
+      <text id="texte-intro" x="1000" y="15" dominant-baseline="middle" text-anchor="middle">In physics, we study light in order to</text>
+      <text id="texte-intro" x="1007" y="30" dominant-baseline="middle" text-anchor="middle">understand phenomenons such as view and</text>
+      <text id="texte-intro" x="997" y="45" font-size='15' dominant-baseline="middle" text-anchor="middle">light propagation. Optics also allows to manipulate</text>
+      <text id="texte-intro" x="997" y="60" font-size='15' dominant-baseline="middle" text-anchor="middle">light (optic fiber, projectors).</text>
+      <text id="propriétés-rayon" x="380" y="527" font-size='12' dominant-baseline="middle" text-anchor="middle">The properties to remember to draw light going through a converging lens are the following ones :</text>
+      <text id="texte-intro" x="380" y="540" font-size='12' dominant-baseline="middle" text-anchor="middle">- The ray originating from B going through the optical center O of the lens isn't deviated.</text>
+      <text id="texte-intro" x="380" y="555" font-size='12' dominant-baseline="middle" text-anchor="middle">- The ray originating from B goes parallely to the optical axis and exits it by going through the image focal point F'.</text>
+      <text id="texte-intro" x="380" y="570" font-size='12' dominant-baseline="middle" text-anchor="middle">- The ray originating from B going through the item's focal point exits the lens parallely to the optical axis.</text>
+      <text id="texte-intro" x="1000" y="100" font-size='15' dominant-baseline="middle" text-anchor="middle">Severels formulas are linked to converging lenses :</text>
+      <text id="texte-intro" x="969" y="400" font-size='12' dominant-baseline="middle" text-anchor="middle">The dioptre &#948; is the inverse of the focal distance f'.</text>
+      <text id="texte-intro" x="1020" y="420" font-size='12' dominant-baseline="middle" text-anchor="middle">The greek letter  &#947; represents the magnification, expressed with no unit.</text>
+      <text id="texte-intro" x="1016" y="440" font-size='12' dominant-baseline="middle" text-anchor="middle">F' represents the image's focal point et F represents item focal point.</text>
+      <text id="texte-intro" x="1005" y="460" font-size='12' dominant-baseline="middle" text-anchor="middle">The distance OF and OF' is called the focal length f'.</text>
+      <text id="texte-intro" x="1008" y="480" font-size='12' dominant-baseline="middle" text-anchor="middle">AB represents the item and A'B' represents the image.</text>
+      <text id="texte-intro" x="984" y="500" font-size='12' dominant-baseline="middle" text-anchor="middle">Converging lenses are very useful in optics.</text>
+      <text id="texte-intro" x="1010" y="520" font-size='12' dominant-baseline="middle" text-anchor="middle">They allow to cure myopia and other vision problems</text>
+      <text id="texte-intro" x="971" y="535" font-size='12' dominant-baseline="middle" text-anchor="middle">linked to the eye's perception of light.</text>
+      <text id="présentationparamètres" x="600" y="1220" font-size='26' dominant-baseline="middle" text-anchor="middle">Parameters of the simulation.</text>
+      <text id="présentationparamètres" x="600" y="1260" font-size='14' dominant-baseline="middle" text-anchor="middle">With this simulator, you can represent the path of light that is emitted by an item, as it goes through a converging lens. Find out what happens in each case !</text>
+      <text x="600" y="1440" font-size='14' dominant-baseline="middle" text-anchor="middle" id="résultat"></text>
+      <text x="600" y="1480" font-size='14' dominant-baseline="middle" text-anchor="middle" id="résultat2"></text>
+      <text x="600" y="1520" font-size='14' dominant-baseline="middle" text-anchor="middle" id="résultat3"></text>
+      <text x="600" y="1560" font-size='14' dominant-baseline="middle" text-anchor="middle" id="résultat4"></text>
+      <text x="600" y="1580" font-size='14' dominant-baseline="middle" text-anchor="middle" id="résultat5"></text>
+      <text x="520" y="1560" font-size='14' dominant-baseline="middle" text-anchor="middle" id="résultat6"></text>
+      <text x="560" y="1600" font-size='14' dominant-baseline="middle" text-anchor="middle" id="résultat7"></text>
+      <text x="600" y="1640" font-size='14' dominant-baseline="middle" text-anchor="middle" id="résultat8"></text>
+          
+ 
+
+     <!--  // Images utilisées. -->
+      <image href="objet.png" height="100" width="50" x="200" y="208" />
+      <image href="image-lent.png" height="100" width="50" x="503" y="290" />
+      <image href="foyerobjet.png" height="100" width="50" x="274" y="250" />
+      <image href="foyerimage.png" height="100" width="50" x="428" y="250" />
+      <image href="centreoptique.png" height="100" width="50" x="357" y="265" />
+      <image href="Relations optics.png" height="272" width="272" x="857" y="120" />
+
+      <image href="objet.png" height="100" width="50" x="200" y="208" />
+      <image href="image-lent.png" height="100" width="50" x="503" y="290" />
+      
+      <image href="centreoptique.png" height="100" width="50" x="585" y="870" />
+
+  }
+    </svg> 
+    
+    </svg> 
+    
+    <br/>
+    <script>
+      svg=document.getElementById('svg')
+      
+
+      function calculfinal()  {
+        const t = parseInt(document.getElementById('AB').value)*25
+        const f= parseInt(document.getElementById('dfocale').value)*25
+        const OA=parseInt(document.getElementById('dobjet').value)*25
+        const OAC=OA*-1
+        const dimage=(1/((1/f)+(1/OAC)))
+        const grandissement=(dimage/OA)
+        const timage=(grandissement*t)
+        const fobjet=(600-f)
+        const fimage=(600+f)
+
+
+          console.log(t,f,OA, dimage);
+
+
+        document.getElementById("segment").setAttribute("x1", (600-OA)  ) ; // objet initial
+        document.getElementById("segment").setAttribute("y1", 900 ) ; 
+        document.getElementById("segment").setAttribute("x2",(600-OA) ) ;
+        document.getElementById("segment").setAttribute("y2", 900-t ) ;
+
+        document.getElementById("segment15").setAttribute("x1", (600+dimage)  ); // Point B' de l'image
+        document.getElementById("segment15").setAttribute("y1", 900 ) ;
+        document.getElementById("segment15").setAttribute("x2",(600+dimage) ) ;
+        document.getElementById("segment15").setAttribute("y2", 900+timage ) ;
+
+        document.getElementById("segment30").setAttribute("x1", (600+f)  );  // Foyer image.
+        document.getElementById("segment30").setAttribute("y1", 900 ) ;
+        document.getElementById("segment30").setAttribute("x2",(600+f) ) ;
+        document.getElementById("segment30").setAttribute("y2", 890 ) ;
+
+        document.getElementById("segment45").setAttribute("x1", (600-f)  ); // Foyer objet.
+        document.getElementById("segment45").setAttribute("y1", 900 ) ;
+        document.getElementById("segment45").setAttribute("x2",(600-f) ) ;
+        document.getElementById("segment45").setAttribute("y2", 890 ) ;
+
+        document.getElementById("segment60").setAttribute("x1", (600-OA)  ); // Rayon avant refleté par la lentille.
+        document.getElementById("segment60").setAttribute("y1", 900-t ) ;
+        document.getElementById("segment60").setAttribute("x2",(600) ) ;
+        document.getElementById("segment60").setAttribute("y2", 900-t ) ;
+
+        document.getElementById("segment75").setAttribute("x1", (600+dimage)  ); 
+        document.getElementById("segment75").setAttribute("y1", 900+timage ) ;
+        document.getElementById("segment75").setAttribute("x2",(600+dimage) ) ;
+        document.getElementById("segment75").setAttribute("y2", 900 ) ;
+
+        document.getElementById("segment90").setAttribute("x1", (600+f)  ); 
+        document.getElementById("segment90").setAttribute("y1", 900 ) ;
+        document.getElementById("segment90").setAttribute("x2",(600) ) ;
+        document.getElementById("segment90").setAttribute("y2", 900-t ) ;
+
+        document.getElementById("segment105").setAttribute("x1", (600+dimage)  ); 
+        document.getElementById("segment105").setAttribute("y1", 900+timage) ;
+        document.getElementById("segment105").setAttribute("x2",(600-OA) ) ;
+        document.getElementById("segment105").setAttribute("y2", 900-t ) ;
+
+        document.getElementById("segment120").setAttribute("x1", (600-f)  ); 
+        document.getElementById("segment120").setAttribute("y1", 900 ) ;
+        document.getElementById("segment120").setAttribute("x2",(600-OA) ) ;
+        document.getElementById("segment120").setAttribute("y2", 900-t ) ;
+
+        document.getElementById("segment135").setAttribute("x1", (600)  ); 
+        document.getElementById("segment135").setAttribute("y1", 900+timage ) ;
+        document.getElementById("segment135").setAttribute("x2",(600-f) ) ;
+        document.getElementById("segment135").setAttribute("y2", 900 ) ;
+
+        document.getElementById("segment150").setAttribute("x1", (600+dimage)  ); 
+        document.getElementById("segment150").setAttribute("y1", 900+timage ) ;
+        document.getElementById("segment150").setAttribute("x2",(600+f) ) ;
+        document.getElementById("segment150").setAttribute("y2", 900 ) ;
+
+        document.getElementById("segment175").setAttribute("x1", (600+dimage)  ); 
+        document.getElementById("segment175").setAttribute("y1", 900+timage ) ;
+        document.getElementById("segment175").setAttribute("x2",(600) ) ;
+        document.getElementById("segment175").setAttribute("y2", 900+timage ) ;
+
+
+        if (grandissement<1) {
+            document.getElementById("résultat").innerHTML="The image is smaller than the item."
+        }
+
+        else {
+          document.getElementById("résultat").innerHTML="The image is bigger than the item."
+        }
+
+        if (grandissement==1) {
+          document.getElementById("résultat").innerHTML= "The item and the image have the same size."
+        }
+
+        if (f==OA) {
+          document.getElementById("résultat2").innerHTML= "The image is cast into infinity, the simulator is thus having trouble..."
+          } 
+
+        else if (f>OA) { 
+           document.getElementById("résultat2").innerHTML="The image is upright and virtual (stare at the intersect of the rays in the item's plane.)."
+           document.getElementById("résultat").innerHTML="The image is bigger than the item."
+           }
+
+        else {
+           document.getElementById("résultat2").innerHTML="The image is reversed and real."
+           }
+            
+          document.getElementById("résultat4").innerHTML= "Thank you for using the simulator !"
+          document.getElementById("résultat3").innerHTML= "You are looking at a modelisation of light going through a converging lens (in red)." 
+
+          }
+        
+    </script>
+  </body>
+</html>
