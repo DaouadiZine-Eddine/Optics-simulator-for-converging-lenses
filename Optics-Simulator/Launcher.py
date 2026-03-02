@@ -4,13 +4,16 @@ import pygame
 import math
 import webbrowser
 import time
+import os
 #Importing important elements.
 from pygame import *
 pygame.init()
+script_dir = os.path.dirname(os.path.abspath(__file__))
+resources_dir = os.path.join(script_dir, "Optics-Simulator")
 #Images.
-Logo=pygame.image.load("Optique logo.png")
-French_Flag=pygame.image.load("French flag.png")
-UK_flag=pygame.image.load("UK flag.png")
+Logo=pygame.image.load(os.path.join(resources_dir, "Optique logo.png"))
+French_Flag=pygame.image.load(os.path.join(resources_dir, "French flag.png"))
+UK_flag=pygame.image.load(os.path.join(resources_dir, "UK flag.png"))
 pygame.display.set_icon(Logo)
 pygame.display.set_caption('Optics Simulator.')
 
@@ -60,11 +63,11 @@ while running:
         pygame.draw.rect(screen, (125, 0, 0), (105, 435, 150, 55), 1)
     
     if (pygame.key.get_pressed()[pygame.K_RETURN]==True and bouton_gauche==1) :
-        webbrowser.open_new_tab("English version of the simulator.html")
+        webbrowser.open_new_tab("Physics simulator for converging lenses.html")
         pygame.time.delay(1500)
         sys.exit()
     if (pygame.key.get_pressed()[pygame.K_RETURN]==True and bouton_gauche==0) :
-        webbrowser.open_new_tab("simulateur lentilles convergentes physique.html")
+        webbrowser.open_new_tab("Physique : Simulateur de lentilles convergentes.html")
         pygame.time.delay(1500)
         sys.exit()
     pygame.display.flip()
