@@ -22,16 +22,29 @@ When dealing with infinity... the light may go off screen.
 <img width="1436" height="879" alt="image" src="https://github.com/user-attachments/assets/3bbaaaee-1977-4cbc-8971-9b13d905b3c8" />
 
 
-It can even, for each image give its attributes :
+It can even, for each image give its attributes in order :
+
 
 
 <img width="276" height="85" alt="image" src="https://github.com/user-attachments/assets/69452ae4-0b94-4609-ba1d-b77285e07d6a" />
 
 
+
+
+
+
 <img width="696" height="93" alt="image" src="https://github.com/user-attachments/assets/671074cc-c08f-40ab-9267-d15e647f1a5a" />
 
 
+
+
+
+
 <img width="301" height="94" alt="image" src="https://github.com/user-attachments/assets/cd68596b-a491-43fa-a9b8-444dc413d944" />
+
+
+
+
 
 
 <img width="579" height="88" alt="image" src="https://github.com/user-attachments/assets/01c2a84b-a12e-40c9-8802-db6ece86749f" />
