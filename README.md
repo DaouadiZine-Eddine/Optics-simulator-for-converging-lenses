@@ -59,5 +59,12 @@ I love photonics, as well as optics and it is one of the fields I would like to 
 I believe the project can be useful for high-school students, in order to understand how physics and computer science can go along very well to dissect how the world around us works.
 
 I hope you will enjoy the simulator, thank you for taking your time to see my project.
+
+
+
+
 Cordially,
+
+
+
 DAOUADI Zine-Eddine.
