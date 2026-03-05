@@ -22,7 +22,7 @@ When dealing with infinity... the light may go off screen.
 <img width="1436" height="879" alt="image" src="https://github.com/user-attachments/assets/3bbaaaee-1977-4cbc-8971-9b13d905b3c8" />
 
 
-It can even, for each image give its attributes in order :
+It can even, for each image give its attributes in order (from upper left, to the lower right one respectively) :
 
 
 
